@@ -3,25 +3,24 @@
 
 {% block content %}
 <h2 class="mb-4 text-center">Tweet Details Form</h2>
-<form action="#" method="post" class="card p-4 shadow-sm bg-body rounded">
+<form action="#" method="post" class="card p-4 shadow-sm">
   <div class="mb-3">
-    <label for="company" class="form-label">Company Name</label>
-    <input type="text" name="nm" class="form-control" id="company" placeholder="e.g., OpenAI" />
-  </div>
-  <div class="mb-3">
-    <label for="tweetType" class="form-label">Tweet Type</label>
-    <input type="text" name="tt" class="form-control" id="tweetType" placeholder="e.g., Promotional" />
+    <label class="form-label">Company Name</label>
+    <input type="text" name="nm" class="form-control" placeholder="e.g., OpenAI" />
   </div>
   <div class="mb-3">
-    <label for="message" class="form-label">Message</label>
-    <input type="text" name="msg" class="form-control" id="message" placeholder="Enter tweet message" />
+    <label class="form-label">Tweet Type</label>
+    <input type="text" name="tt" class="form-control" placeholder="e.g., Promotional" />
   </div>
   <div class="mb-3">
-    <label for="topic" class="form-label">Topic</label>
-    <input type="text" name="tp" class="form-control" id="topic" placeholder="e.g., AI, Education" />
+    <label class="form-label">Message</label>
+    <input type="text" name="msg" class="form-control" placeholder="Enter tweet message" />
   </div>
-  <div class="text-center">
-    <button type="submit" class="btn btn-primary w-100">Generate & Predict</button>
+  <div class="mb-3">
+    <label class="form-label">Topic</label>
+    <input type="text" name="tp" class="form-control" placeholder="e.g., AI, Education" />
   </div>
+  <button type="submit" class="btn btn-primary w-100">Generate & Predict</button>
 </form>
 {% endblock %}
+

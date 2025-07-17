@@ -1,14 +1,14 @@
 # 🐦 Tweet Generator & Like Predictor
 
-A **Flask** web app that generates tweets based on user input and predicts how many likes the tweet is likely to get — powered by **machine learning** and **natural language processing**.
+A **Flask** web app that generates tweets based on user input and predicts how many likes the tweet is likely to get powered by **machine learning** and **natural language processing**.
 
 ---
 
 ## 🚀 Features
 
-- 🔮 **Like Prediction** — Uses a trained ML model to estimate likes.
-- ✍️ **Tweet Generator** — Creates tweets based on a form input.
-- 🧠 **NLP-powered** — Sentiment analysis with TextBlob.
+- 🔮 **Like Prediction** :- Uses a trained ML model to estimate likes.
+- ✍️ **Tweet Generator** :- Creates tweets based on a form input.
+- 🧠 **NLP-powered** :- Sentiment analysis with TextBlob.
 
 ---
 

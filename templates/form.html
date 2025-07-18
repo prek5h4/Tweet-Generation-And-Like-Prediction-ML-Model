@@ -2,15 +2,35 @@
 {% block title %}Form{% endblock %}
 
 {% block content %}
-<form action="#" method="post">
-    <p>Company Name:</p>
-    <p><input type="text" name="nm" /></p>
-    <p>Tweet Type:</p>
-    <p><input type="text" name="tt" /></p>
-    <p>Message</p>
-    <p><input type="text" name="msg" /></p>
-    <p>Topic</p>
-    <p><input type="text" name="tp" /></p>
-    <p><input type="submit" value="submit" /></p>
+<h2 class="mb-4 text-center">Tweet Details Form</h2>
+<form action="#" method="post" class="card p-4 shadow-sm">
+  <div class="mb-3">
+    <label class="form-label">Company Name</label>
+    <input type="text" name="nm" class="form-control" placeholder="e.g., OpenAI" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Tweet Type</label>
+    <input type="text" name="tt" class="form-control" placeholder="e.g., Promotional" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Message</label>
+    <input type="text" name="msg" class="form-control" placeholder="Enter tweet message" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Topic</label>
+    <input type="text" name="tp" class="form-control" placeholder="e.g., AI, Education" />
+  </div>
+  <button type="submit" class="btn btn-primary w-100">Generate & Predict</button>
 </form>
+{% if generated_tweet %}
+<div class="card mt-5">
+  <h4 class="mb-3" style="color: #4b4b4b;">Generated Tweet</h4>
+  <p class="mb-2">{{ generated_tweet }}</p>
+  <hr>
+  <div class="d-flex justify-content-between align-items-center">
+    <span class="fw-semibold" style="color: #6c63ff;">Predicted Likes:</span>
+    <span class="fs-5 fw-bold" style="color: #333;">{{ predicted_likes }} ❤️</span>
+  </div>
+</div>
+{% endif %}
 {% endblock %}

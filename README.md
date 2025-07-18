@@ -25,8 +25,8 @@ A **Flask** web app that generates tweets based on user input and predicts how m
 
 ## 🌐 Live Demo
 
-> Hosted on [Render](https://render.com)  
-> 🔗 **https://tweet-generation-ml-model.onrender.com/**
+> Hosted on Hugging spaces
+> https://huggingface.co/spaces/prek5h4/tweetgenandlikepredictor
 
 ---
 

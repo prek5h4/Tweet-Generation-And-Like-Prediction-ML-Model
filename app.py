@@ -5,12 +5,16 @@ import joblib
 from textblob import TextBlob
 import numpy as np
 import pandas as pd
+import pickle , os, requests
 
 app = Flask(__name__)
 generator = SimpleTweetGenerator()
     
 label_encoder = joblib.load("label_encoder.joblib")
 model = joblib.load("like_predictor.pkl")
+
+
+
 
 @app.route("/")
 def home():

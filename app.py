@@ -112,7 +112,6 @@ def form():
             company_encoded = label_encoder.transform([company])[0]
             sentiment = TextBlob(gen_tweet).sentiment.polarity
             return word_count, char_count, sentiment, company_encoded
-<<<<<<< HEAD
 
         features = extract_features_from_tweet(generated_tweet, company)
         columns = ["word_count", "char_count", "sentiment", "company_encoded"]
@@ -133,29 +132,6 @@ def form():
         )
     else:
         return render_template("form.html")
-=======
-
-        features = extract_features_from_tweet(generated_tweet, company)
-        columns = ["word_count", "char_count", "sentiment", "company_encoded"]
-        features_df = pd.DataFrame([features], columns=columns)
-
-   
-        predicted_log_likes = model.predict(features_df)[0]
-        predicted_likes = int(np.expm1(predicted_log_likes))
-
-        return render_template(
-            'form.html',
-            generated_tweet=generated_tweet,
-            predicted_likes=predicted_likes,
-            company=company,
-            tweet_type=tweet_type,
-            message=message,
-            topic=topic
-        )
-    else:
-        return render_template("form.html")
-
->>>>>>> 507207f20c2e0398b1c64bbd20d1e2a817361ebc
     
 if __name__ == '__main__':
     app.run(debug=True, port=5001)  
